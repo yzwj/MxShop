@@ -1,0 +1,17 @@
+*.pyc
+*~
+*.swo
+*.swp
+db.sqlite3
+media
+media-images
+cache
+.idea
+CACHE/
+.sass-cache/
+main.css
+main.css.map
+ref.css
+ref.css.map
+.coverage
+venv/
