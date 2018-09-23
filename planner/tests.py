@@ -8,9 +8,9 @@
 # class EventObjects(object):
 #     def setUp(self):
 #         self.user = User.objects.create_superuser(
-#             'user@micropyramid.com', 'username', 'password')
+#             'user@ITEA.com', 'username', 'password')
 
-#         user_login = self.client.login(username='user@micropyramid.com', password='password')
+#         user_login = self.client.login(username='user@ITEA.com', password='password')
 
 #         self.meeting = Event.objects.create(event_type='Meeting', name='llll', status='Not Held',
 #                                             description='addsdasda', start_date=timezone.now(),

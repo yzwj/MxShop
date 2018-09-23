@@ -15,7 +15,7 @@ class AccountCreateTest(object):
         self.shipping_address = Address.objects.create(
             street="KPHB", city="HYDERABAD", state="ANDHRA PRADESH", postcode="500073", country='IN')
         self.account = Account.objects.create(
-            name="Uday", email="udayteja@micropyramid.com", phone="8333855552", billing_address=self.address,
+            name="Uday", email="udayteja@ITEA.com", phone="8333855552", billing_address=self.address,
             shipping_address=self.shipping_address, website="www.uday.com", created_by=self.user,
             industry="SOFTWARE", description="Yes.. Testing Done")
         self.client.login(email='u@mp.com', password='uday2293')
@@ -24,14 +24,14 @@ class AccountCreateTest(object):
 class AccountsCreateTestCase(AccountCreateTest, TestCase):
     def test_account_create_url(self):
         response = self.client.get('/accounts/create/', {
-            'name': "Uday", 'email': "udayteja@micropyramid.com", 'phone': "", 'billing_address': self.address,
+            'name': "Uday", 'email': "udayteja@ITEA.com", 'phone': "", 'billing_address': self.address,
             'shipping_address': self.shipping_address, 'website': "www.uday.com",
             'industry': "SOFTWARE", 'description': "Yes.. Testing Done"})
         self.assertEqual(response.status_code, 200)
 
     def test_account_create_html(self):
         response = self.client.get('/accounts/create/', {
-            'name': "Uday", 'email': "udayteja@micropyramid.com", 'phone': "", 'billing_address': self.address,
+            'name': "Uday", 'email': "udayteja@ITEA.com", 'phone': "", 'billing_address': self.address,
             'shipping_address': self.shipping_address, 'website': "www.uday.com",
             'industry': "SOFTWARE", 'description': "Yes.. Testing Done"})
         self.assertTemplateUsed(response, 'create_account.html')
@@ -73,7 +73,7 @@ class AccountsRemoveTestCase(AccountCreateTest, TestCase):
 class AccountsUpdateUrlTestCase(AccountCreateTest, TestCase):
     def test_accounts_update(self):
         response = self.client.get('/accounts/'+ str(self.account.id) +'/edit/', {
-            'name': "Uday", 'email': "udayteja@micropyramid.com", 'phone': "8333855552", 'billing_address': self.address,
+            'name': "Uday", 'email': "udayteja@ITEA.com", 'phone': "8333855552", 'billing_address': self.address,
             'shipping_address': self.address, 'website': "www.uday.com",
             'industry': "SOFTWARE", 'description': "Yes.. Testing Done"})
         self.assertEqual(response.status_code, 200)

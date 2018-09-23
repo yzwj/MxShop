@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Django-CRM'
-copyright = u'2017, MicroPyramid'
+copyright = u'2017, ITEA'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

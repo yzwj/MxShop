@@ -6,10 +6,10 @@ from common.models import User
 class ObjectsCreation(object):
     def setUp(self):
         self.client = Client()
-        self.user = User.objects.create(first_name="admin", username='admin', email='admin@micropyramid.com')
+        self.user = User.objects.create(first_name="admin", username='admin', email='admin@ITEA.com')
         self.user.set_password('admin123')
         self.user.save()
-        user_login = self.client.login(username='admin@micropyramid.com', password='admin123')
+        user_login = self.client.login(username='admin@ITEA.com', password='admin123')
 
 
 class TestHomePage(ObjectsCreation, TestCase):

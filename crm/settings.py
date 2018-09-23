@@ -180,7 +180,7 @@ COMPRESS_OFFLINE_CONTEXT = {
     'STATIC_URL': 'STATIC_URL',
 }
 
-DEFAULT_FROM_EMAIL = 'no-reply@django-crm.micropyramid.com'
+DEFAULT_FROM_EMAIL = 'no-reply@django-crm.ITEA.com'
 MAIL_SENDER = 'AMAZON'
 INACTIVE_MAIL_SENDER = 'MANDRILL'
 
